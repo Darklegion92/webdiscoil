@@ -1,0 +1,32 @@
+.home-main {
+  display: grid;
+  grid-template-areas:
+    "head head head"
+    "body body body"
+    "footer footer footer";
+
+  /*grid-column-gap: 100px;
+  grid-row-gap: 10px;*/
+}
+
+.head-home {
+  grid-area: head;
+}
+.body-home {
+  grid-area: body;
+  margin: 10px;
+  display: grid;
+  grid-template-areas: "opciones mapa mapa mapa mapa mapa";
+}
+
+.body-home > .mapa {
+  grid-area: mapa;
+}
+.body-home > .opciones {
+  grid-area: opciones;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 250px;
+  /*margin: 10px;*/
+}

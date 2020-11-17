@@ -1,0 +1,13 @@
+* {
+  font-family: var(--fuente-principal);
+  font-size: small;
+}
+body {
+  overflow-x: hidden;
+}
+:root {
+  --color-principal: #abc355;
+  --color-secundario: #d38241;
+  --color-terciario: #efe74b;
+  --fuente-principal: "Lato", sans-serif;
+}

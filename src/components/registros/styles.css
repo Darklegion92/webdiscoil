@@ -1,0 +1,29 @@
+.home-route {
+  display: grid;
+  grid-template-areas:
+    "head head head"
+    "body body body"
+    "footer footer footer";
+  /*grid-column-gap: 100px;
+  grid-row-gap: 10px;*/
+}
+
+.head-route {
+  grid-area: head;
+}
+.body-route {
+  grid-area: body;
+  max-height: 300px;
+  display: grid;
+  grid-template-areas: "opciones tabla tabla tabla";
+}
+
+.body-route > .tabla {
+  grid-area: tabla;
+  margin: 30px;
+}
+.body-route > .opciones {
+  grid-area: opciones;
+  margin: 20px;
+  max-width: 200px;
+}

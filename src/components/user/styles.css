@@ -1,0 +1,32 @@
+.home-user {
+  display: grid;
+  grid-template-areas:
+    "head head head"
+    "body body body"
+    "footer footer footer";
+}
+
+.head-user {
+  grid-area: head;
+}
+.body-user {
+  grid-area: body;
+  max-height: 300px;
+  display: grid;
+  grid-template-areas: "actualizar nuevo";
+  margin: 60px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.body-user > .nuevo {
+  grid-area: nuevo;
+  max-width: 100%;
+}
+.body-user > h3 {
+ font-weight: bold;
+}
+.body-user > .actualizar {
+  grid-area: actualizar;
+  max-width: 100%;
+}
