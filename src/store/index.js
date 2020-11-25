@@ -13,6 +13,26 @@ class ContextStore extends Component {
     cargarTabla: false,
     punteros: [],
     diaSemana: '',
+    consultarLocalizacion: async datos => {
+      const punteros = await axios.get(CONSTANTES.APIREST + '/localizacion', {
+        params: {
+          idUsuario: datos.idUsuario,
+          fecha: datos.fecha
+        }
+      })
+      console.log(punteros)
+      if (punteros.data.res.length > 0)
+        this.setState({ punteros: punteros.data.res })
+      else {
+        this.setState({
+          alerta: {
+            modal: true,
+            typeModal: 'Sin Datos',
+            mensajeModal: 'No Existen Datos Para Visualizar'
+          }
+        })
+      }
+    },
     consultarRuta: async datos => {
       const punteros = await axios.get(CONSTANTES.APIREST + '/rutas/usuario', {
         params: {
